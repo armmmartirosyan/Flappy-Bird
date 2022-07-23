@@ -1,4 +1,6 @@
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box; }
 
 html {
@@ -8,8 +10,7 @@ body {
   background-color: #fff;
   color: #000;
   font-size: 1.4rem;
-  font-family: fantasy;
-  overflow: hidden; }
+  font-family: fantasy, ui-sans-serif, sans-serif; }
 
 .game {
   width: 90rem;
@@ -71,11 +72,13 @@ body {
   background-repeat: no-repeat;
   background-size: 185%;
   background-position: center;
-  z-index: 2; }
+  z-index: 2;
+  transition: transform 1s; }
 
 .pipe__top, .pipe__top__second {
   position: absolute;
   top: 0;
+  background-image: url("../img/pipe-bottom.png");
   background-position: top, center;
   background-size: 99% 100%;
   transform: rotateZ(180deg);
@@ -84,6 +87,7 @@ body {
 .pipe__bottom, .pipe__bottom__second {
   position: absolute;
   bottom: 0;
+  background-image: url("../img/pipe-bottom.png");
   background-position: top, center;
   background-size: 99% 100%;
   z-index: 1; }
@@ -103,7 +107,8 @@ body {
 
 .score__text {
   font-size: 4rem;
-  color: #2b352f; }
+  color: #2b352f;
+  margin: 10rem 0; }
 
 @media only screen and (max-width: 1200px) {
   html {
@@ -116,111 +121,5 @@ body {
     width: 100vw;
     height: 100vh;
     margin: 0; } }
-/*
-*{
-  box-sizing: border-box;
-}
-body{
-  background-color: #fff;
-  color: #000;
-  font-size: 14px;
-  font-family: fantasy;
-}
-.game{
-  width: 700px;
-  height: 90vh;
-  background-image: url(../img/bg-anim.gif);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  margin: 30px auto;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-}
-.start__menu{
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.over__menu{
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.start__btn{
-  font-size: 40px;
-  color: #fff;
-  padding: 10px 20px;
-  background-color: rgba(32, 61, 60, 0.6);
-  border-radius: 10px;
-  cursor: pointer;
-  transition: all .4s;
-  &:hover{
-    background-color: rgba(32, 61, 60, 0.81);
-  }
-}
-.restart__btn{
-  font-size: 40px;
-  color: #fff;
-  padding: 10px 20px;
-  background-color: rgba(32, 61, 60, 0.6);
-  border-radius: 10px;
-  cursor: pointer;
-  transition: all .4s;
-  z-index: 2;
-  &:hover{
-    background-color: rgba(32, 61, 60, 0.81);
-  }
-}
-.bird{
-  position: absolute;
-  left: 100px;
-  top: 0;
-  width: 30px;
-  height: 30px;
-  background-image: url("../img/bird.gif");
-  background-repeat: no-repeat;
-  background-size: 185%;
-  background-position: center;
-  z-index: 2;
-}
-.pipe__top, .pipe__top__second{
-  position: absolute;
-  top: 0;
-  background-position: top, center;
-  background-size: 99% 100%;
-  transform: rotateZ(180deg);
-  z-index: 1;
-}
-.pipe__bottom, .pipe__bottom__second{
-  position: absolute;
-  bottom: 0;
-  background-position: top, center;
-  background-size: 99% 100%;
-  z-index: 1;
-}
-.score{
-  position: absolute;
-  top: 50px;
-  right: 50px;
-  color: #DBDD93FF;
-  font-size: 40px;
-  margin: 0;
-  z-index: 2;
-}
-.over__text {
-  font-size: 100px;
-  color: #2b352f;
-}
-.score__text {
-  font-size: 40px;
-  color: #2b352f;
-}*/
 
 /*# sourceMappingURL=style.css.map */
